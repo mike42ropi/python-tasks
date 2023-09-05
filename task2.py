@@ -7,14 +7,16 @@
 # If the number is a multiple of 4, print out “divisible by 4”.
 # Once you learn functions,revisit this and write this code inside a function.
 
+# ans=0
 num= int(input("Enter number: "))
 
+def divisible(num):
+    if num%4==0:
+        ans=(f"{num} Even  and divisible by 4")
+    elif num%2==0 and num%4!=0:
+        ans=(f"{num} Even")
+    else:
+        ans=(f"{num} Odd and not divisible by 4")
+    return ans
 
-
-if num%2==0 and num%4!=0:
-    print("Even")
-elif num%4==0:
-    print("Even  and divisible by 4")
-else:
-    print("Odd and not divisible by 4")
-
+print(divisible(num))
