@@ -7,12 +7,16 @@ var1 = int(input("Enter number: "))
 var2 = int(input("Enter number: "))
 var3 = int(input("Enter number: "))
 
-
-if var1>var2 and var1>var3:
-    print("var1 is the largest")
-elif var2>var1 and var2>var3:
-    print("var2 is the largest")
-elif var3>var1 and var3>var2:
-    print("var3 is the largest")
-else:
-    print("They are all same")
+def largest_number(var1,var2,var3):
+    status = ""
+    if var1>var2 and var1>var3:
+        status=("var1 is the largest")
+    elif var2>var1 and var2>var3:
+        status=("var2 is the largest")
+    elif var3>var1 and var3>var2:
+        status=("var3 is the largest")
+    else:
+        status=("They are all same")
+    return status
+result = largest_number(var1,var2,var3)
+print(result)

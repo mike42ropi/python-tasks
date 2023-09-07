@@ -9,15 +9,21 @@
 pnum= str(input("Enter number: "))
 phone=0
 
-if len(pnum)==10 and (pnum.startswith("07")) or (pnum.startswith("71")) or(pnum.startswith("01")):
-    phone="+254" + (pnum[1:])
-    print(phone)
-elif (len(pnum)==13) and (pnum.startswith("+254")):
-    phone="+254" + (pnum[4:])
-    print(phone)
+def phone_number(pnum,phone ):
+    status = ""
+    if len(pnum)==10 and (pnum.startswith("07")) or (pnum.startswith("71")) or(pnum.startswith("01")):
+        phone="+254" + (pnum[1:])
+        status=(phone)
+    elif (len(pnum)==13) and (pnum.startswith("+254")):
+        phone="+254" + (pnum[4:])
+        status=(phone)
 
-elif ((len(pnum)==12)) and (pnum.startswith("254")):
-    phone="+254" + (pnum[3:])
-    print(phone)
-else:
-    print("invalid phone number")
+    elif ((len(pnum)==12)) and (pnum.startswith("254")):
+        phone="+254" + (pnum[3:])
+        status=(phone)
+    else:
+        status="invalid phone number"
+    return status
+
+result = phone_number(pnum,phone )
+print(result)

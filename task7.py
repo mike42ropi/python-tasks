@@ -5,15 +5,21 @@
 
 marks= int(input("Enter marks: "))
 
-if marks>79 and marks<=100:
-    print("A")
-elif marks>=60 and marks<=79:
-    print("B")
-elif marks>=49 and marks<60:
-    print("C")
-elif marks>=40 and marks<50:
-    print("D")
-elif marks<40:
-    print("E")
-else:
-    pass
+def scores(marks):
+    grade = ""
+    if marks>79 and marks<=100:
+        grade="A"
+    elif marks>=60 and marks<=79:
+        grade="B"
+    elif marks>=49 and marks<60:
+        grade="C"
+    elif marks>=40 and marks<50:
+        grade="D"
+    elif marks<40:
+        grade="E"
+    else:
+        pass
+    return grade
+
+result=scores(marks)
+print(result)

@@ -6,10 +6,14 @@
 
 email= input("Enter email: ")
 
-
-if (len(email)==0 or email.isupper or "@" not in email or " " in email or "." not in email) or (email.index(".")<=email.index("@")) or  (email.index("@")<0):
-    print(email +" "+"is an invalid email")
-elif email.endswith(".") or email.count("@")>1:
-     print(email +" "+"is an invalid email")
-else:
-    print(email + " " + " is valid email")
+def e_mail(email):
+    status = ""
+    if (len(email)==0 or email.isupper or "@" not in email or " " in email or "." not in email) or (email.index(".")<=email.index("@")) or  (email.index("@")<0):
+        status=(email +" "+"is an invalid email")
+    elif email.endswith(".") or email.count("@")>1:
+        status=(email +" "+"is an invalid email")
+    else:
+        status=(email + " " + " is valid email")
+    return status
+result=e_mail(email)
+print(result)
